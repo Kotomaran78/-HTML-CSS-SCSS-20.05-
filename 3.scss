@@ -1,0 +1,41 @@
+$card-color: #f0f0f0;
+$padding: 20px;
+$card-min-size: 200px;
+
+.card {
+  background-color: $card-color;
+  padding: $padding;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-container {
+  &.grid {
+    display: grid;
+    grid-gap: $padding;
+    grid-template-columns: repeat(auto-fit, minmax($card-min-size, 1fr));
+    width: 100%;
+    padding: $padding;
+    box-sizing: border-box;
+
+    .card {
+      @extend .card;
+    }
+  }
+
+  &.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $padding;
+    padding: $padding;
+    box-sizing: border-box;
+
+    .card {
+      @extend .card;
+      width: $card-min-size;
+      flex-grow: 1;
+    }
+  }
+}

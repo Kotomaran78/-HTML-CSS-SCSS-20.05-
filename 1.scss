@@ -1,0 +1,32 @@
+$primary-color: #007bff;
+$hover-color: #0056b3;
+$button-size: 50px;
+$transition-time: 0.3s;
+
+html {
+  scroll-behavior: smooth;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: $button-size;
+  height: $button-size;
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color $transition-time, transform $transition-time;
+
+  &:hover {
+    background-color: $hover-color;
+    transform: translateY(-3px);
+  }
+}
