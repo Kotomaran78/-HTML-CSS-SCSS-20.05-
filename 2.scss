@@ -1,10 +1,13 @@
+$primary-color: #333;
+$font-color: #fff;
+
 .tooltip-container {
   position: relative;
   display: inline-block;
   text-align: center;
   cursor: pointer;
   font-size: 18px;
-  color: #333;
+  color: $primary-color;
 
   &__text {
     position: relative;
@@ -14,8 +17,8 @@
   &__tooltip {
     visibility: hidden;
     width: 200px;
-    background-color: #333;
-    color: #fff;
+    background-color: $primary-color;
+    color: $font-color;
     text-align: center;
     border-radius: 5px;
     padding: 10px;

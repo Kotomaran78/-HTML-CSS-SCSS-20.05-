@@ -11,13 +11,55 @@ $card-min-size: 200px;
 }
 
 .card-container {
+  box-sizing: border-box;
   &.grid {
     display: grid;
     grid-gap: $padding;
-    grid-template-columns: repeat(auto-fit, minmax($card-min-size, 1fr));
-    width: 100%;
     padding: $padding;
-    box-sizing: border-box;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax($card-min-size, 1fr));
+    
+    @media (max-width: 1135px) {
+      grid-template-columns: repeat(4, 1fr);
+      
+      .card:nth-child(5) {
+        grid-column: span 4;
+      }
+    }
+  
+    @media (max-width: 915px) {
+      grid-template-columns: repeat(6, 1fr);
+      
+      .card {
+        grid-column: span 2;
+      }
+
+      .card:nth-child(4),
+      .card:nth-child(5) {
+        grid-column: span 3;
+      }
+    }
+  
+    @media (max-width: 695px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      .card,
+      .card:nth-child(4) {
+        grid-column: span 1;
+      }
+      
+      .card:nth-child(5) {
+        grid-column: span 2;
+      }
+    }
+  
+    @media (max-width: 475px) {
+      grid-template-columns: 1fr;
+
+      .card:nth-child(5) {
+        grid-column: span 1;
+      }
+    }
 
     .card {
       @extend .card;
@@ -30,7 +72,6 @@ $card-min-size: 200px;
     justify-content: space-between;
     gap: $padding;
     padding: $padding;
-    box-sizing: border-box;
 
     .card {
       @extend .card;

@@ -1,5 +1,6 @@
 $primary-color: #007bff;
 $hover-color: #0056b3;
+$font-color: #fff;
 $button-size: 50px;
 $transition-time: 0.3s;
 
@@ -14,7 +15,7 @@ html {
   width: $button-size;
   height: $button-size;
   background-color: $primary-color;
-  color: #fff;
+  color: $font-color;
   border: none;
   border-radius: 50%;
   display: flex;
