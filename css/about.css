@@ -1,40 +1,38 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background-color: #ffffff;
-}
-body .about {
-  text-align: center;
-  padding: 20px;
   max-width: 800px;
+  margin: auto;
 }
-body .about__title {
+
+.about {
+  text-align: center;
+}
+.about__title {
+  margin: 30px;
   margin-bottom: 10px;
 }
-body .about__line {
+.about__line {
   width: 50%;
-  margin: 0 auto 20px;
+  margin: 30px auto;
   border: 0;
-  border-top: 2px solid #000;
+  border-top: 2px solid #666;
 }
-body .about__description {
+.about__description {
   margin: 30px;
   line-height: 1.5;
   text-align: center;
 }
-body .cards {
+
+.cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  padding: 20px;
   margin: 40px;
 }
-body .cards .card {
+.cards .card {
   text-align: center;
   flex: 1 1 calc(33.333% - 40px);
   width: 300px;
@@ -42,23 +40,23 @@ body .cards .card {
   min-width: 200px;
   max-width: 250px;
 }
-body .cards .card__image-wrapper {
+.cards .card__image-wrapper {
   width: 100px;
   height: 100px;
   margin: 0 auto 20px;
   border-radius: 50%;
-  border: 2px solid #8f8f8f;
+  border: 2px solid #666;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   box-sizing: border-box;
 }
-body .cards .card__title {
+.cards .card__title {
   font-size: 1.2rem;
   margin: 10px 0;
 }
-body .cards .card__description {
+.cards .card__description {
   margin-top: 30px;
   font-size: 0.5rem;
   color: #666;
