@@ -1,4 +1,10 @@
-.tooltip-container {
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltipContainer {
   position: relative;
   display: inline-block;
   text-align: center;
@@ -6,16 +12,15 @@
   font-size: 18px;
   color: #333;
 }
-.tooltip-container__text {
+.tooltipContainer__text {
   position: relative;
   z-index: 10;
 }
-.tooltip-container__tooltip {
+.tooltipContainer__tooltip {
   visibility: hidden;
   width: 200px;
   background-color: #333;
   color: #fff;
-  text-align: center;
   border-radius: 5px;
   padding: 10px;
   position: absolute;
@@ -27,7 +32,7 @@
   transition: opacity 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.tooltip-container:hover .tooltip-container__tooltip {
+.tooltipContainer:hover .tooltipContainer__tooltip {
   visibility: visible;
   opacity: 1;
 }

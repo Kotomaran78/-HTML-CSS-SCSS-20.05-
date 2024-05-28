@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -22,7 +26,6 @@ body {
 .about__description {
   margin: 30px;
   line-height: 1.5;
-  text-align: center;
 }
 
 .cards {
@@ -32,7 +35,8 @@ body {
   justify-content: center;
   margin: 40px;
 }
-.cards .card {
+
+.card {
   text-align: center;
   flex: 1 1 calc(33.333% - 40px);
   width: 300px;
@@ -40,7 +44,7 @@ body {
   min-width: 200px;
   max-width: 250px;
 }
-.cards .card__image-wrapper {
+.card__image-wrapper {
   width: 100px;
   height: 100px;
   margin: 0 auto 20px;
@@ -52,11 +56,11 @@ body {
   padding: 10px;
   box-sizing: border-box;
 }
-.cards .card__title {
+.card__title {
   font-size: 1.2rem;
   margin: 10px 0;
 }
-.cards .card__description {
+.card__description {
   margin-top: 30px;
   font-size: 0.5rem;
   color: #666;

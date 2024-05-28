@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+%card {
+  background-color: $card-color;
+  padding: $padding;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gridCardContainer {
+  display: grid;
+  grid-gap: $padding;
+  padding: $padding;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax($card-min-size, 1fr));
+
+  &__card {
+    @extend %card;
+  }
+}
+
+.flexCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: $padding;
+  padding: $padding;
+
+  &__card {
+    @extend %card;
+    width: $card-min-size;
+    flex-grow: 1;
+  }
+}
